@@ -1,5 +1,5 @@
 // init Isotope
-var $grid = $('.col-md-4').isotope({
+var $grid = $('.collection-img').isotope({
     // options
   });
   // filter items on button click
@@ -7,3 +7,9 @@ var $grid = $('.col-md-4').isotope({
     var filterValue = $(this).attr('data-filter');
     $grid.isotope({ filter: filterValue });
   });
+  var filterBtns = $('.filter-button-group').find('button');
+function resetFilterBtns(){
+  filterBtns.each(function(){
+    $(this).removeClass('active-filter-btn');
+  });
+}
